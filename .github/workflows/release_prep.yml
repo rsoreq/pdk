@@ -13,7 +13,7 @@ on:
 
 jobs:
   release_prep:
-    uses: "puppetlabs/cat-github-actions/.github/workflows/gem_release_prep.yml@main"
+    uses: "puppetlabs/cat-github-actions/.github/workflows/gem_release_prep.yml@7699e0b51f80b94a6e299d2dcfc3b4a1cd1ba5e9" # main
     with:
       target: "${{ github.event.inputs.target }}"
       version: "${{ github.events.inputs.version }}"

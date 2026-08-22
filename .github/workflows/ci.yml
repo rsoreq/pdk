@@ -26,7 +26,7 @@ jobs:
           - puppet_gem_version: "~> 8.0"
             ruby_version: "3.2"
     name: "spec (ruby ${{ matrix.ruby_version }})"
-    uses: "puppetlabs/cat-github-actions/.github/workflows/gem_ci.yml@main"
+    uses: "puppetlabs/cat-github-actions/.github/workflows/gem_ci.yml@7699e0b51f80b94a6e299d2dcfc3b4a1cd1ba5e9" # main
     secrets: inherit
     with:
       rake_task: 'spec:coverage'
@@ -52,7 +52,7 @@ jobs:
           - puppet_gem_version: "~> 8.0"
             ruby_version: "3.2"
     name: "acceptance (ruby ${{ matrix.ruby_version }} | ${{ matrix.os }})"
-    uses: "puppetlabs/cat-github-actions/.github/workflows/gem_acceptance.yml@main"
+    uses: "puppetlabs/cat-github-actions/.github/workflows/gem_acceptance.yml@7699e0b51f80b94a6e299d2dcfc3b4a1cd1ba5e9" # main
     secrets: inherit
     with:
       ruby_version: ${{ matrix.ruby_version }}
