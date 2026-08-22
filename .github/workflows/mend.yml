@@ -11,7 +11,7 @@ on:
 jobs:
 
   mend:
-    uses: "puppetlabs/cat-github-actions/.github/workflows/tooling_mend_ruby.yml@main"
+    uses: "puppetlabs/cat-github-actions/.github/workflows/tooling_mend_ruby.yml@7699e0b51f80b94a6e299d2dcfc3b4a1cd1ba5e9" # main
     secrets: "inherit"
   
   mend_package:
@@ -29,7 +29,7 @@ jobs:
         with:
           ruby-version: 2.7
 
-      - uses: "actions/setup-java@v4"
+      - uses: "actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3" # v4
         with:
           distribution: "temurin"
           java-version: "17"

@@ -48,14 +48,14 @@ jobs:
     steps:
       # (3) checkout this repository in order to "see" the following custom action
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       # (4) "use" the custom action to retrigger the failed "acceptance job" above
       # NOTE: pass the SOURCE_GITHUB_TOKEN to the custom action because (a) it must have
       # this to trigger the reusable workflow that restarts the failed job; and
       # (b) custom actions do not have access to the calling workflow's secrets
       - name: Trigger reusable workflow
-        uses: "puppetlabs/cat-github-actions/.github/actions/workflow-restarter-proxy@main"
+        uses: "puppetlabs/cat-github-actions/.github/actions/workflow-restarter-proxy@7699e0b51f80b94a6e299d2dcfc3b4a1cd1ba5e9" # main
         env:
           SOURCE_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
