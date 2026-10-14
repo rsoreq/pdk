@@ -10,7 +10,7 @@ on:
 
 jobs:
   release:
-    uses: "puppetlabs/cat-github-actions/.github/workflows/gem_release.yml@main"
+    uses: "puppetlabs/cat-github-actions/.github/workflows/gem_release.yml@e512c428365648bc64fa4d8f36eff0d185ebf8a2" # main
     with:
       target: "${{ github.event.inputs.target }}"
     secrets: "inherit"
