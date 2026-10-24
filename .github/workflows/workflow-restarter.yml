@@ -19,7 +19,7 @@ on:
 
 jobs:
   call-reusable-workflow:
-    uses: "puppetlabs/cat-github-actions/.github/workflows/workflow-restarter.yml@main"
+    uses: "puppetlabs/cat-github-actions/.github/workflows/workflow-restarter.yml@ce4d5944e1a9af52630246ff890e433816177595" # main
     with:
       repo: ${{ inputs.repo }}
       run_id: ${{ inputs.run_id }}
